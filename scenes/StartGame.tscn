@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cge6b3xgog70h"]
+
+[ext_resource type="Script" uid="uid://4564op2ec35f" path="res://scripts/start_game.gd" id="1_gog4b"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gog4b")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 163.0
+offset_right = 635.0
+offset_bottom = 186.0
+text = "CANDYLAND"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 301.0
+offset_right = 643.0
+offset_bottom = 332.0
+action_mode = 0
+text = "START GAME"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
