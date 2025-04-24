@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxqufae6j4qcn"]
+[gd_scene load_steps=11 format=3 uid="uid://dxqufae6j4qcn"]
 
 [ext_resource type="Script" uid="uid://c506lwf131w43" path="res://scenes/game_board.gd" id="1_p2sq2"]
 [ext_resource type="Texture2D" uid="uid://bfbwtt77vn58d" path="res://assets/CandyLand Assets/Candyland Tileset.png" id="2_fbkij"]
 [ext_resource type="Texture2D" uid="uid://bcff3m1dky27q" path="res://assets/sprites and art/Chocolate.png" id="4_2mynd"]
+[ext_resource type="PackedScene" uid="uid://kaq8sepuycas" path="res://scenes/dice.tscn" id="4_p2sq2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
 
@@ -1012,37 +1013,37 @@ layer_1/tile_data = PackedInt32Array(851956, 0, 1, 917492, 0, 1, 983028, 0, 1, 8
 position = Vector2(-2996, 176)
 
 [node name="Spot2" type="Marker2D" parent="."]
-position = Vector2(-2665, 297)
+position = Vector2(-2687, 275)
 
 [node name="Spot3" type="Marker2D" parent="."]
-position = Vector2(-2409, 435)
+position = Vector2(-2429, 401)
 
 [node name="Spot4" type="Marker2D" parent="."]
-position = Vector2(-2171, 542)
+position = Vector2(-2178, 525)
 
 [node name="Spot5" type="Marker2D" parent="."]
-position = Vector2(-1894, 680)
+position = Vector2(-1922, 654)
 
 [node name="Spot6" type="Marker2D" parent="."]
-position = Vector2(-1660, 794)
+position = Vector2(-1664, 783)
 
 [node name="Spot7" type="Marker2D" parent="."]
-position = Vector2(-1383, 929)
+position = Vector2(-1415, 920)
 
 [node name="Spot8" type="Marker2D" parent="."]
-position = Vector2(-1138, 1046)
+position = Vector2(-1155, 1067)
 
 [node name="Spot9" type="Marker2D" parent="."]
-position = Vector2(-920, 1188)
+position = Vector2(-899, 1172)
 
 [node name="Spot10" type="Marker2D" parent="."]
-position = Vector2(-637, 1309)
+position = Vector2(-637, 1283)
 
 [node name="Spot11" type="Marker2D" parent="."]
-position = Vector2(-389, 1445)
+position = Vector2(-383, 1393)
 
 [node name="Spot12" type="Marker2D" parent="."]
-position = Vector2(-141, 1324)
+position = Vector2(-133, 1299)
 
 [node name="Spot13" type="Marker2D" parent="."]
 position = Vector2(107, 1172)
@@ -1233,8 +1234,10 @@ position = Vector2(254, -1563)
 [node name="Player" type="Sprite2D" parent="."]
 z_index = 1
 texture_filter = 1
-position = Vector2(-798, -277)
+position = Vector2(-3163, -43)
 texture = ExtResource("4_2mynd")
+centered = false
+offset = Vector2(0, -140)
 hframes = 4
 vframes = 3
 
@@ -1242,3 +1245,13 @@ vframes = 3
 libraries = {
 &"": SubResource("AnimationLibrary_dyuqk")
 }
+
+[node name="Dice" parent="." instance=ExtResource("4_p2sq2")]
+position = Vector2(3142, -1563)
+scale = Vector2(14.4688, 14.5625)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="dice_has_rolled" from="Dice" to="." method="_on_dice_dice_has_rolled"]

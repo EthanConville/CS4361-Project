@@ -1,6 +1,7 @@
 extends Sprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var timer : Timer = $Timer
+signal dice_has_rolled(roll)
 
 func ready() -> void:
 	randomize()
@@ -13,4 +14,5 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_timer_timeout() -> void:
 	var dice_roll : int = randi_range(1, 6)
-	animation_player.play("1")
+	animation_player.play(str(dice_roll))
+	emit_signal("dice_has_rolled", dice_roll)

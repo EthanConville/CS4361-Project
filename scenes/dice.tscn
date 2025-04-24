@@ -145,6 +145,7 @@ _data = {
 }
 
 [node name="Dice" type="Sprite2D"]
+position = Vector2(186, 143)
 texture = ExtResource("1_27nyo")
 hframes = 6
 script = ExtResource("2_mg5ex")
