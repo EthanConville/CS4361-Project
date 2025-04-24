@@ -1,10 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c12ybxf7sp4ue"]
+[gd_scene load_steps=8 format=3 uid="uid://c12ybxf7sp4ue"]
 
 [ext_resource type="Script" uid="uid://dofl4uq846u64" path="res://scripts/player.gd" id="1_gneq0"]
-[ext_resource type="Texture2D" uid="uid://b23mp7yhxb1jn" path="res://assets/sprites/knight.png" id="1_rfmnd"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_jkihx"]
-radius = 5.0
+[ext_resource type="Texture2D" uid="uid://b23mp7yhxb1jn" path="res://assets/sprites and art/knight.png" id="1_rfmnd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gneq0"]
 atlas = ExtResource("1_rfmnd")
@@ -42,16 +39,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Player1" type="CharacterBody2D"]
+[node name="Board Markers and Players" type="Node2D"]
 script = ExtResource("1_gneq0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
-shape = SubResource("CircleShape2D_jkihx")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Player1" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_f2c3w")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.101337
+
+[node name="SpotTwo" type="Marker2D" parent="."]
+position = Vector2(64, 125)
