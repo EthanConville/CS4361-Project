@@ -985,7 +985,7 @@ _data = {
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("game_spaces")]
 script = ExtResource("1_p2sq2")
-game_spaces = [NodePath("Start"), NodePath("Spot2"), NodePath("Spot3"), NodePath("Spot4"), NodePath("Spot5"), NodePath("Spot6"), NodePath("Spot7"), NodePath("Spot8"), NodePath("Spot9"), NodePath("Spot10"), NodePath("Spot11"), NodePath("Spot12"), NodePath("Spot13"), NodePath("Spot14"), NodePath("Spot15"), NodePath("Spot16"), NodePath("Spot17"), NodePath("Spot18"), NodePath("Spot19"), NodePath("Spot20"), NodePath("Spot21"), NodePath("Spot22"), NodePath("Spot23"), NodePath("Spot24"), NodePath("Spot25"), NodePath("Spot26"), NodePath("Spot27"), NodePath("Spot28"), NodePath("Spot29"), NodePath("Spot30"), NodePath("Spot31"), NodePath("Spot32"), NodePath("Spot33"), NodePath("Spot34"), NodePath("Spot35"), NodePath("Spot36"), NodePath("Spot37"), NodePath("Spot38"), NodePath("Spot39"), NodePath("Spot40"), NodePath("Spot41"), NodePath("Spot42"), NodePath("Spot43"), NodePath("Spot44"), NodePath("Spot45"), NodePath("Spot46"), NodePath("Spot47"), NodePath("Spot48"), NodePath("Spot49"), NodePath("Spot50"), NodePath("Spot51"), NodePath("Spot52"), NodePath("Spot53"), NodePath("Spot54"), NodePath("Spot55"), NodePath("Spot56"), NodePath("Spot57"), NodePath("Spot58"), NodePath("Spot59"), NodePath("Spot60"), NodePath("Spot61"), NodePath("Spot62"), NodePath("Spot63"), NodePath("Spot64"), NodePath("Spot65"), NodePath("Spot66"), NodePath("Spot67"), NodePath("Spot68"), NodePath("Spot69"), NodePath("Spot70"), NodePath("Spot71"), NodePath("Spot72"), NodePath("Spot73"), NodePath("Spot74")]
+game_spaces = [NodePath("Tile colliders/Start"), NodePath("Tile colliders/Spot2"), NodePath("Tile colliders/Spot3"), NodePath("Tile colliders/Spot4"), NodePath("Tile colliders/Spot5"), NodePath("Tile colliders/Spot6"), NodePath("Tile colliders/Spot7"), NodePath("Tile colliders/Spot8"), NodePath("Tile colliders/Spot9"), NodePath("Tile colliders/Spot10"), NodePath("Tile colliders/Spot11"), NodePath("Tile colliders/Spot12"), NodePath("Tile colliders/Spot13"), NodePath("Tile colliders/Spot14"), NodePath("Tile colliders/Spot15"), NodePath("Tile colliders/Spot16"), NodePath("Tile colliders/Spot17"), NodePath("Tile colliders/Spot18"), NodePath("Tile colliders/Spot19"), NodePath("Tile colliders/Spot20"), NodePath("Tile colliders/Spot21"), NodePath("Tile colliders/Spot22"), NodePath("Tile colliders/Spot23"), NodePath("Tile colliders/Spot24"), NodePath("Tile colliders/Spot25"), NodePath("Tile colliders/Spot26"), NodePath("Tile colliders/Spot27"), NodePath("Tile colliders/Spot28"), NodePath("Tile colliders/Spot29"), NodePath("Tile colliders/Spot30"), NodePath("Tile colliders/Spot31"), NodePath("Tile colliders/Spot32"), NodePath("Tile colliders/Spot33"), NodePath("Tile colliders/Spot34"), NodePath("Tile colliders/Spot35"), NodePath("Tile colliders/Spot36"), NodePath("Tile colliders/Spot37"), NodePath("Tile colliders/Spot38"), NodePath("Tile colliders/Spot39"), NodePath("Tile colliders/Spot40"), NodePath("Tile colliders/Spot41"), NodePath("Tile colliders/Spot42"), NodePath("Tile colliders/Spot43"), NodePath("Tile colliders/Spot44"), NodePath("Tile colliders/Spot45"), NodePath("Tile colliders/Spot46"), NodePath("Tile colliders/Spot47"), NodePath("Tile colliders/Spot48"), NodePath("Tile colliders/Spot49"), NodePath("Tile colliders/Spot50"), NodePath("Tile colliders/Spot51"), NodePath("Tile colliders/Spot52"), NodePath("Tile colliders/Spot53"), NodePath("Tile colliders/Spot54"), NodePath("Tile colliders/Spot55"), NodePath("Tile colliders/Spot56"), NodePath("Tile colliders/Spot57"), NodePath("Tile colliders/Spot58"), NodePath("Tile colliders/Spot59"), NodePath("Tile colliders/Spot60"), NodePath("Tile colliders/Spot61"), NodePath("Tile colliders/Spot62"), NodePath("Tile colliders/Spot63"), NodePath("Tile colliders/Spot64"), NodePath("Tile colliders/Spot65"), NodePath("Tile colliders/Spot66"), NodePath("Tile colliders/Spot67"), NodePath("Tile colliders/Spot68"), NodePath("Tile colliders/Spot69"), NodePath("Tile colliders/Spot70"), NodePath("Tile colliders/Spot71"), NodePath("Tile colliders/Spot72"), NodePath("Tile colliders/Spot73"), NodePath("Tile colliders/Spot74")]
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(222, -91)
@@ -1009,228 +1009,6 @@ layer_1/y_sort_origin = 1
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(851956, 0, 1, 917492, 0, 1, 983028, 0, 1, 851957, 0, 1, 917493, 0, 1, 983029, 0, 1, 851958, 65536, 1, 917494, 65536, 1, 851959, 65536, 1, 917495, 65536, 1, 851960, 131072, 1, 917496, 131072, 1, 851961, 131072, 1, 917497, 131072, 1, 851962, 196608, 1, 917498, 196608, 1, 851963, 196608, 1, 917499, 196608, 1, 851964, 262144, 1, 917500, 262144, 1, 851965, 262144, 1, 917501, 262144, 1, 851966, 327680, 1, 917502, 327680, 1, 851967, 327680, 1, 917503, 327680, 1, 786432, 0, 1, 851968, 0, 1, 786433, 0, 1, 851969, 0, 1, 786434, 65536, 1, 786435, 65536, 1, 851971, 65536, 1, 851970, 65536, 1, 786436, 131072, 1, 786437, 131072, 1, 851973, 131072, 1, 851972, 131072, 1, 786438, 196608, 1, 851974, 196608, 1, 851975, 196608, 1, 786439, 196608, 1, 851976, 262144, 1, 851977, 262144, 1, 786441, 262144, 1, 786440, 262144, 1, 720905, 327680, 1, 720904, 327680, 1, 655368, 327680, 1, 655369, 327680, 1, 458757, 131072, 1, 524293, 131072, 1, 393222, 131072, 1, 458758, 131072, 1, 524294, 131072, 1, 393223, 131072, 1, 458759, 131072, 1, 393224, 65536, 1, 458760, 65536, 1, 524296, 0, 1, 589832, 0, 1, 393225, 65536, 1, 458761, 65536, 1, 524297, 0, 1, 589833, 0, 1, 589829, 196608, 1, 655365, 196608, 1, 655366, 196608, 1, 589830, 196608, 1, 589828, 262144, 1, 589827, 262144, 1, 655363, 262144, 1, 655364, 262144, 1, 655362, 327680, 1, 589826, 327680, 1, 589825, 327680, 1, 524289, 0, 1, 655361, 327680, 1, 524290, 0, 1, 458753, 0, 1, 458754, 0, 1, 393218, 65536, 1, 393217, 65536, 1, 327681, 65536, 1, 327682, 65536, 1, 262146, 131072, 1, 262145, 131072, 1, 196609, 131072, 1, 196610, 131072, 1, 262147, 196608, 1, 196611, 196608, 1, 196612, 196608, 1, 262148, 196608, 1, 131076, 196608, 1, 131075, 196608, 1, 65540, 262144, 1, 65539, 262144, 1, 3, 262144, 1, 4, 262144, 1, 2, 327680, 1, 1, 327680, 1, 65537, 327680, 1, 65538, 327680, 1, 0, 0, 1, 65535, 0, 1, 131071, 0, 1, 65536, 0, 1, 65534, 65536, 1, 131070, 65536, 1, 131069, 65536, 1, 65533, 65536, 1, 196605, 131072, 1, 262141, 131072, 1, 262142, 131072, 1, 196606, 131072, 1, 327678, 196608, 1, 327677, 196608, 1, 393213, 196608, 1, 393214, 196608, 1, 458750, 262144, 1, 524286, 262144, 1, 458749, 262144, 1, 524285, 262144, 1, 589822, 327680, 1, 655358, 327680, 1, 589821, 327680, 1, 655357, 327680, 1, 589820, 0, 1, 589819, 0, 1, 655355, 0, 1, 655356, 0, 1, 589818, 65536, 1, 655354, 65536, 1, 655353, 65536, 1, 589817, 65536, 1, 589816, 131072, 1, 655352, 131072, 1, 655351, 131072, 1, 589815, 131072, 1, 589814, 196608, 1, 655350, 196608, 1, 655349, 196608, 1, 589813, 196608, 1, 655348, 262144, 1, 589812, 262144, 1, 655347, 262144, 1, 589811, 262144, 1, 524275, 327680, 1, 458739, 327680, 1, 458740, 327680, 1, 524276, 327680, 1, 393204, 0, 1, 393203, 0, 1, 327667, 0, 1, 327668, 0, 1, 262131, 65536, 1, 262132, 65536, 1, 196596, 65536, 1, 196595, 65536, 1, 131060, 131072, 1, 131059, 131072, 1, 65523, 131072, 1, 65524, 131072, 1, -12, 196608, 1, -13, 196608, 1, -65549, 196608, 1, -65548, 196608, 1, -131084, 262144, 1, -131085, 262144, 1, -196621, 262144, 1, -196620, 262144, 1, -262156, 327680, 1, -262157, 327680, 1, -327693, 327680, 1, -327692, 327680, 1, -327691, 0, 1, -262155, 0, 1, -262154, 0, 1, -327690, 0, 1, -327689, 65536, 1, -262153, 65536, 1, -262152, 65536, 1, -327688, 65536, 1, -327687, 131072, 1, -262151, 131072, 1, -262150, 131072, 1, -327686, 131072, 1, -262149, 196608, 1, -327685, 196608, 1, -262148, 196608, 1, -327684, 196608, 1, -262147, 262144, 1, -327683, 262144, 1, -262146, 262144, 1, -327682, 262144, 1, -262145, 327680, 1, -327681, 327680, 1, -393216, 327680, 1, -327680, 327680, 1, -393217, 0, 1, -458752, 0, 1, -524288, 0, 1, -458753, 0, 1, -458751, 65536, 1, -458750, 65536, 1, -524286, 65536, 1, -524287, 65536, 1, -458749, 131072, 1, -524285, 131072, 1, -458748, 131072, 1, -524284, 131072, 1, -458747, 196608, 1, -524283, 196608, 1, -524282, 196608, 1, -458746, 196608, 1, -589818, 262144, 1, -589819, 262144, 1, -655355, 262144, 1, -655354, 262144, 1, -720891, 327680, 1, -786427, 327680, 1, -786426, 327680, 1, -720890, 327680, 1, -720892, 0, 1, -786428, 0, 1, -786429, 0, 1, -720893, 0, 1, -720894, 65536, 1, -786430, 65536, 1, -786431, 65536, 1, -720895, 65536, 1, -720896, 131072, 1, -786432, 131072, 1, -720897, 131072, 1, -655361, 131072, 1, -720898, 196608, 1, -655362, 196608, 1, -655363, 196608, 1, -720899, 196608, 1, -786434, 262144, 1, -786435, 262144, 1, -851971, 262144, 1, -851970, 262144, 1, -917506, 327680, 1, -917507, 327680, 1, -983043, 327680, 1, -983042, 327680, 1, -1048578, 0, 1, -1048579, 0, 1, -1114115, 0, 1, -1114114, 0, 1, -1048580, 65536, 1, -1114116, 65536, 1, -1114117, 65536, 1, -1048581, 65536, 1, -1048582, 131072, 1, -1048583, 131072, 1, -1114119, 131072, 1, -1114118, 131072, 1, -983046, 196608, 1, -983047, 196608, 1, -917511, 196608, 1, -917510, 196608, 1, -851974, 262144, 1, -851975, 262144, 1, -786439, 262144, 1, -786438, 262144, 1, -720903, 327680, 1, -655366, 327680, 1, -720902, 327680, 1, -655367, 327680, 1, -589830, 0, 1, -524294, 0, 1, -524295, 0, 1, -589831, 0, 1, -589832, 65536, 1, -524296, 65536, 1, -524297, 65536, 1, -589833, 65536, 1, -589834, 131072, 1, -524298, 131072, 1, -524299, 131072, 1, -589835, 131072, 1, -589836, 196608, 1, -524300, 196608, 1, -524301, 196608, 1, -589837, 196608, 1, -655372, 262144, 1, -655373, 262144, 1, -720909, 262144, 1, -720908, 262144, 1, -786445, 327680, 1, -786444, 327680, 1, -851980, 327680, 1, -851981, 327680, 1)
 
-[node name="Start" type="Marker2D" parent="."]
-position = Vector2(-2996, 176)
-
-[node name="Spot2" type="Marker2D" parent="."]
-position = Vector2(-2687, 275)
-
-[node name="Spot3" type="Marker2D" parent="."]
-position = Vector2(-2429, 401)
-
-[node name="Spot4" type="Marker2D" parent="."]
-position = Vector2(-2178, 525)
-
-[node name="Spot5" type="Marker2D" parent="."]
-position = Vector2(-1922, 654)
-
-[node name="Spot6" type="Marker2D" parent="."]
-position = Vector2(-1664, 783)
-
-[node name="Spot7" type="Marker2D" parent="."]
-position = Vector2(-1415, 920)
-
-[node name="Spot8" type="Marker2D" parent="."]
-position = Vector2(-1155, 1067)
-
-[node name="Spot9" type="Marker2D" parent="."]
-position = Vector2(-899, 1172)
-
-[node name="Spot10" type="Marker2D" parent="."]
-position = Vector2(-637, 1283)
-
-[node name="Spot11" type="Marker2D" parent="."]
-position = Vector2(-383, 1393)
-
-[node name="Spot12" type="Marker2D" parent="."]
-position = Vector2(-133, 1299)
-
-[node name="Spot13" type="Marker2D" parent="."]
-position = Vector2(107, 1172)
-
-[node name="Spot14" type="Marker2D" parent="."]
-position = Vector2(375, 1071)
-
-[node name="Spot15" type="Marker2D" parent="."]
-position = Vector2(173, 940)
-
-[node name="Spot16" type="Marker2D" parent="."]
-position = Vector2(-156, 920)
-
-[node name="Spot17" type="Marker2D" parent="."]
-position = Vector2(-383, 1067)
-
-[node name="Spot18" type="Marker2D" parent="."]
-position = Vector2(-646, 936)
-
-[node name="Spot19" type="Marker2D" parent="."]
-position = Vector2(-899, 800)
-
-[node name="Spot20" type="Marker2D" parent="."]
-position = Vector2(-637, 654)
-
-[node name="Spot21" type="Marker2D" parent="."]
-position = Vector2(-399, 543)
-
-[node name="Spot22" type="Marker2D" parent="."]
-position = Vector2(-156, 417)
-
-[node name="Spot23" type="Marker2D" parent="."]
-position = Vector2(77, 553)
-
-[node name="Spot24" type="Marker2D" parent="."]
-position = Vector2(284, 472)
-
-[node name="Spot25" type="Marker2D" parent="."]
-position = Vector2(497, 371)
-
-[node name="Spot26" type="Marker2D" parent="."]
-position = Vector2(254, 214)
-
-[node name="Spot27" type="Marker2D" parent="."]
-position = Vector2(-14, 83)
-
-[node name="Spot28" type="Marker2D" parent="."]
-position = Vector2(-277, -43)
-
-[node name="Spot29" type="Marker2D" parent="."]
-position = Vector2(-504, 83)
-
-[node name="Spot30" type="Marker2D" parent="."]
-position = Vector2(-787, 214)
-
-[node name="Spot31" type="Marker2D" parent="."]
-position = Vector2(-1025, 340)
-
-[node name="Spot32" type="Marker2D" parent="."]
-position = Vector2(-1273, 461)
-
-[node name="Spot33" type="Marker2D" parent="."]
-position = Vector2(-1531, 360)
-
-[node name="Spot34" type="Marker2D" parent="."]
-position = Vector2(-1794, 229)
-
-[node name="Spot35" type="Marker2D" parent="."]
-position = Vector2(-2037, 103)
-
-[node name="Spot36" type="Marker2D" parent="."]
-position = Vector2(-2325, -23)
-
-[node name="Spot37" type="Marker2D" parent="."]
-position = Vector2(-2568, -175)
-
-[node name="Spot38" type="Marker2D" parent="."]
-position = Vector2(-2325, -306)
-
-[node name="Spot39" type="Marker2D" parent="."]
-position = Vector2(-2072, -437)
-
-[node name="Spot40" type="Marker2D" parent="."]
-position = Vector2(-1814, -528)
-
-[node name="Spot41" type="Marker2D" parent="."]
-position = Vector2(-1551, -675)
-
-[node name="Spot42" type="Marker2D" parent="."]
-position = Vector2(-1273, -806)
-
-[node name="Spot43" type="Marker2D" parent="."]
-position = Vector2(-1025, -932)
-
-[node name="Spot44" type="Marker2D" parent="."]
-position = Vector2(-787, -1074)
-
-[node name="Spot45" type="Marker2D" parent="."]
-position = Vector2(-504, -932)
-
-[node name="Spot46" type="Marker2D" parent="."]
-position = Vector2(-277, -806)
-
-[node name="Spot47" type="Marker2D" parent="."]
-position = Vector2(0, -675)
-
-[node name="Spot48" type="Marker2D" parent="."]
-position = Vector2(284, -528)
-
-[node name="Spot49" type="Marker2D" parent="."]
-position = Vector2(497, -437)
-
-[node name="Spot50" type="Marker2D" parent="."]
-position = Vector2(755, -306)
-
-[node name="Spot51" type="Marker2D" parent="."]
-position = Vector2(1033, -437)
-
-[node name="Spot52" type="Marker2D" parent="."]
-position = Vector2(1296, -306)
-
-[node name="Spot53" type="Marker2D" parent="."]
-position = Vector2(1564, -175)
-
-[node name="Spot54" type="Marker2D" parent="."]
-position = Vector2(1781, -43)
-
-[node name="Spot55" type="Marker2D" parent="."]
-position = Vector2(2034, -175)
-
-[node name="Spot56" type="Marker2D" parent="."]
-position = Vector2(2297, -306)
-
-[node name="Spot57" type="Marker2D" parent="."]
-position = Vector2(2034, -437)
-
-[node name="Spot58" type="Marker2D" parent="."]
-position = Vector2(1781, -528)
-
-[node name="Spot59" type="Marker2D" parent="."]
-position = Vector2(1564, -675)
-
-[node name="Spot60" type="Marker2D" parent="."]
-position = Vector2(1296, -806)
-
-[node name="Spot61" type="Marker2D" parent="."]
-position = Vector2(1564, -932)
-
-[node name="Spot62" type="Marker2D" parent="."]
-position = Vector2(1781, -1074)
-
-[node name="Spot63" type="Marker2D" parent="."]
-position = Vector2(2034, -1205)
-
-[node name="Spot64" type="Marker2D" parent="."]
-position = Vector2(1781, -1311)
-
-[node name="Spot65" type="Marker2D" parent="."]
-position = Vector2(1564, -1442)
-
-[node name="Spot66" type="Marker2D" parent="."]
-position = Vector2(1296, -1311)
-
-[node name="Spot67" type="Marker2D" parent="."]
-position = Vector2(1033, -1205)
-
-[node name="Spot68" type="Marker2D" parent="."]
-position = Vector2(755, -1074)
-
-[node name="Spot69" type="Marker2D" parent="."]
-position = Vector2(497, -932)
-
-[node name="Spot70" type="Marker2D" parent="."]
-position = Vector2(284, -1074)
-
-[node name="Spot71" type="Marker2D" parent="."]
-position = Vector2(1, -1205)
-
-[node name="Spot72" type="Marker2D" parent="."]
-position = Vector2(-277, -1311)
-
-[node name="Spot73" type="Marker2D" parent="."]
-position = Vector2(-14, -1442)
-
-[node name="Spot74" type="Marker2D" parent="."]
-position = Vector2(254, -1563)
-
 [node name="Player" type="Sprite2D" parent="."]
 z_index = 1
 texture_filter = 1
@@ -1253,5 +1031,229 @@ scale = Vector2(14.4688, 14.5625)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
+
+[node name="Tile colliders" type="Node" parent="."]
+
+[node name="Start" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2996, 176)
+
+[node name="Spot2" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2687, 275)
+
+[node name="Spot3" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2429, 401)
+
+[node name="Spot4" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2178, 525)
+
+[node name="Spot5" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1922, 654)
+
+[node name="Spot6" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1664, 783)
+
+[node name="Spot7" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1415, 920)
+
+[node name="Spot8" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1155, 1067)
+
+[node name="Spot9" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-899, 1172)
+
+[node name="Spot10" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-637, 1283)
+
+[node name="Spot11" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-383, 1393)
+
+[node name="Spot12" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-133, 1299)
+
+[node name="Spot13" type="Marker2D" parent="Tile colliders"]
+position = Vector2(107, 1172)
+
+[node name="Spot14" type="Marker2D" parent="Tile colliders"]
+position = Vector2(375, 1071)
+
+[node name="Spot15" type="Marker2D" parent="Tile colliders"]
+position = Vector2(173, 940)
+
+[node name="Spot16" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-156, 920)
+
+[node name="Spot17" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-383, 1067)
+
+[node name="Spot18" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-646, 936)
+
+[node name="Spot19" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-899, 800)
+
+[node name="Spot20" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-637, 654)
+
+[node name="Spot21" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-399, 543)
+
+[node name="Spot22" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-156, 417)
+
+[node name="Spot23" type="Marker2D" parent="Tile colliders"]
+position = Vector2(77, 553)
+
+[node name="Spot24" type="Marker2D" parent="Tile colliders"]
+position = Vector2(284, 472)
+
+[node name="Spot25" type="Marker2D" parent="Tile colliders"]
+position = Vector2(497, 371)
+
+[node name="Spot26" type="Marker2D" parent="Tile colliders"]
+position = Vector2(254, 214)
+
+[node name="Spot27" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-14, 83)
+
+[node name="Spot28" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-277, -43)
+
+[node name="Spot29" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-504, 83)
+
+[node name="Spot30" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-787, 214)
+
+[node name="Spot31" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1025, 340)
+
+[node name="Spot32" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1273, 461)
+
+[node name="Spot33" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1531, 360)
+
+[node name="Spot34" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1794, 229)
+
+[node name="Spot35" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2037, 103)
+
+[node name="Spot36" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2325, -23)
+
+[node name="Spot37" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2568, -175)
+
+[node name="Spot38" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2325, -306)
+
+[node name="Spot39" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-2072, -437)
+
+[node name="Spot40" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1814, -528)
+
+[node name="Spot41" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1551, -675)
+
+[node name="Spot42" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1273, -806)
+
+[node name="Spot43" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-1025, -932)
+
+[node name="Spot44" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-787, -1074)
+
+[node name="Spot45" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-504, -932)
+
+[node name="Spot46" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-277, -806)
+
+[node name="Spot47" type="Marker2D" parent="Tile colliders"]
+position = Vector2(0, -675)
+
+[node name="Spot48" type="Marker2D" parent="Tile colliders"]
+position = Vector2(284, -528)
+
+[node name="Spot49" type="Marker2D" parent="Tile colliders"]
+position = Vector2(497, -437)
+
+[node name="Spot50" type="Marker2D" parent="Tile colliders"]
+position = Vector2(755, -306)
+
+[node name="Spot51" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1033, -437)
+
+[node name="Spot52" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1296, -306)
+
+[node name="Spot53" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1564, -175)
+
+[node name="Spot54" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1781, -43)
+
+[node name="Spot55" type="Marker2D" parent="Tile colliders"]
+position = Vector2(2034, -175)
+
+[node name="Spot56" type="Marker2D" parent="Tile colliders"]
+position = Vector2(2297, -306)
+
+[node name="Spot57" type="Marker2D" parent="Tile colliders"]
+position = Vector2(2034, -437)
+
+[node name="Spot58" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1781, -528)
+
+[node name="Spot59" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1564, -675)
+
+[node name="Spot60" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1296, -806)
+
+[node name="Spot61" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1564, -932)
+
+[node name="Spot62" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1781, -1074)
+
+[node name="Spot63" type="Marker2D" parent="Tile colliders"]
+position = Vector2(2034, -1205)
+
+[node name="Spot64" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1781, -1311)
+
+[node name="Spot65" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1564, -1442)
+
+[node name="Spot66" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1296, -1311)
+
+[node name="Spot67" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1033, -1205)
+
+[node name="Spot68" type="Marker2D" parent="Tile colliders"]
+position = Vector2(755, -1074)
+
+[node name="Spot69" type="Marker2D" parent="Tile colliders"]
+position = Vector2(497, -932)
+
+[node name="Spot70" type="Marker2D" parent="Tile colliders"]
+position = Vector2(284, -1074)
+
+[node name="Spot71" type="Marker2D" parent="Tile colliders"]
+position = Vector2(1, -1205)
+
+[node name="Spot72" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-277, -1311)
+
+[node name="Spot73" type="Marker2D" parent="Tile colliders"]
+position = Vector2(-14, -1442)
+
+[node name="Spot74" type="Marker2D" parent="Tile colliders"]
+position = Vector2(254, -1563)
 
 [connection signal="dice_has_rolled" from="Dice" to="." method="_on_dice_dice_has_rolled"]
