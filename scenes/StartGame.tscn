@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cge6b3xgog70h"]
+[gd_scene load_steps=8 format=3 uid="uid://cge6b3xgog70h"]
 
 [ext_resource type="Script" uid="uid://4564op2ec35f" path="res://scripts/start_game.gd" id="1_gog4b"]
+[ext_resource type="Texture2D" uid="uid://dgya0mq7nltu6" path="res://assets/CandyLand Assets/marshmallow-removebg-preview.png" id="2_ajk8e"]
+[ext_resource type="Texture2D" uid="uid://bj3hoc1mc7bjj" path="res://assets/CandyLand Assets/cotton_candy-removebg-preview.png" id="3_f1whm"]
+[ext_resource type="Texture2D" uid="uid://cv87jve1akcfl" path="res://assets/CandyLand Assets/chocolate-removebg-preview.png" id="4_fdd41"]
+[ext_resource type="Texture2D" uid="uid://b1wps0pxp5pkd" path="res://assets/CandyLand Assets/candy_corn-removebg-preview.png" id="5_1vjhn"]
+
+[sub_resource type="Animation" id="Animation_2cjuw"]
+resource_name = "start_game"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ryxiv"]
+_data = {
+&"start_game": SubResource("Animation_2cjuw")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -26,5 +38,27 @@ offset_right = 643.0
 offset_bottom = 332.0
 action_mode = 0
 text = "START GAME"
+
+[node name="Marshmallow-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(199, 756)
+texture = ExtResource("2_ajk8e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Marshmallow-removebg-preview"]
+libraries = {
+&"": SubResource("AnimationLibrary_ryxiv")
+}
+
+[node name="CottonCandy-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(1560.92, 753.25)
+scale = Vector2(1.30387, 1.30387)
+texture = ExtResource("3_f1whm")
+
+[node name="Chocolate-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(997, 726)
+texture = ExtResource("4_fdd41")
+
+[node name="CandyCorn-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(590, 760)
+texture = ExtResource("5_1vjhn")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
