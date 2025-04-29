@@ -7,11 +7,13 @@ extends Node2D
 @onready var chocolate_lake: AnimatedSprite2D = get_node("Chocolate Lake")
 @onready var cotton_candy_cottage: AnimatedSprite2D = get_node("Cotton Candy Cottage")
 
-@export var players : Array[AnimatedSprite2D]
+@export var players : Array[Character]
 var place : int = 1
 #control whose durrent it is
 var current_player = 0;
 var number_of_spaces : int
+var dice_rolled : bool = false
+
 @onready var dice := $Dice
 @onready var timer := $Timer
 
@@ -33,7 +35,7 @@ func _ready() -> void:
 
 
 func _on_dice_dice_has_rolled(roll: Variant) -> void:
-	print(roll)
+	dice_rolled = true
 	while(roll != 0):
 		await(move(place))
 		place += 1
@@ -48,3 +50,4 @@ func move(place) -> void:
 		tween.tween_property(players[current_player], "position", game_spaces[place].position, 1)
 		timer.start()
 		await timer.timeout
+		players[current_player].stop()

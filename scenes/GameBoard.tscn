@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dxqufae6j4qcn"]
+[gd_scene load_steps=34 format=3 uid="uid://dxqufae6j4qcn"]
 
 [ext_resource type="Script" uid="uid://c506lwf131w43" path="res://scenes/game_board.gd" id="1_p2sq2"]
 [ext_resource type="Texture2D" uid="uid://bfbwtt77vn58d" path="res://assets/CandyLand Assets/Candyland Tileset.png" id="2_fbkij"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://kaq8sepuycas" path="res://scenes/dice.tscn" id="4_p2sq2"]
 [ext_resource type="Texture2D" uid="uid://dwi8f8m36shbl" path="res://assets/sprites and art/Sprites/Sprites.png" id="5_fc4ka"]
 [ext_resource type="Texture2D" uid="uid://c8tptguhreb7i" path="res://assets/sprites and art/Sprites/1.png" id="6_dyuqk"]
+[ext_resource type="Script" uid="uid://kmy0s1i1qrmf" path="res://scripts/Character.gd" id="6_ir2so"]
 [ext_resource type="Texture2D" uid="uid://c4ygl0hb5n0i6" path="res://assets/sprites and art/Sprites/3.png" id="8_jhtls"]
 [ext_resource type="Texture2D" uid="uid://bkxudb8mwma61" path="res://assets/sprites and art/Sprites/4.png" id="9_ir2so"]
 
@@ -1049,14 +1050,6 @@ region = Rect2(9, 0, 252, 341)
 atlas = ExtResource("6_dyuqk")
 region = Rect2(261, 0, 252, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nhjkd"]
-atlas = ExtResource("6_dyuqk")
-region = Rect2(513, 0, 252, 341)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yg655"]
-atlas = ExtResource("6_dyuqk")
-region = Rect2(765, 0, 252, 341)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_uixav"]
 animations = [{
 "frames": [{
@@ -1065,12 +1058,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ir2so")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nhjkd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yg655")
 }],
 "loop": true,
 "name": &"walk",
@@ -1109,7 +1096,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_5yngt")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -1145,7 +1132,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_7v3y5")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -1181,14 +1168,14 @@ animations = [{
 "texture": SubResource("AtlasTexture_tppf5")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("game_spaces", "players")]
 script = ExtResource("1_p2sq2")
 game_spaces = [NodePath("Tile colliders/Start"), NodePath("Tile colliders/Spot2"), NodePath("Tile colliders/Spot3"), NodePath("Tile colliders/Spot4"), NodePath("Tile colliders/Spot5"), NodePath("Tile colliders/Spot6"), NodePath("Tile colliders/Spot7"), NodePath("Tile colliders/Spot8"), NodePath("Tile colliders/Spot9"), NodePath("Tile colliders/Spot10"), NodePath("Tile colliders/Spot11"), NodePath("Tile colliders/Spot12"), NodePath("Tile colliders/Spot13"), NodePath("Tile colliders/Spot14"), NodePath("Tile colliders/Spot15"), NodePath("Tile colliders/Spot16"), NodePath("Tile colliders/Spot17"), NodePath("Tile colliders/Spot18"), NodePath("Tile colliders/Spot19"), NodePath("Tile colliders/Spot20"), NodePath("Tile colliders/Spot21"), NodePath("Tile colliders/Spot22"), NodePath("Tile colliders/Spot23"), NodePath("Tile colliders/Spot24"), NodePath("Tile colliders/Spot25"), NodePath("Tile colliders/Spot26"), NodePath("Tile colliders/Spot27"), NodePath("Tile colliders/Spot28"), NodePath("Tile colliders/Spot29"), NodePath("Tile colliders/Spot30"), NodePath("Tile colliders/Spot31"), NodePath("Tile colliders/Spot32"), NodePath("Tile colliders/Spot33"), NodePath("Tile colliders/Spot34"), NodePath("Tile colliders/Spot35"), NodePath("Tile colliders/Spot36"), NodePath("Tile colliders/Spot37"), NodePath("Tile colliders/Spot38"), NodePath("Tile colliders/Spot39"), NodePath("Tile colliders/Spot40"), NodePath("Tile colliders/Spot41"), NodePath("Tile colliders/Spot42"), NodePath("Tile colliders/Spot43"), NodePath("Tile colliders/Spot44"), NodePath("Tile colliders/Spot45"), NodePath("Tile colliders/Spot46"), NodePath("Tile colliders/Spot47"), NodePath("Tile colliders/Spot48"), NodePath("Tile colliders/Spot49"), NodePath("Tile colliders/Spot50"), NodePath("Tile colliders/Spot51"), NodePath("Tile colliders/Spot52"), NodePath("Tile colliders/Spot53"), NodePath("Tile colliders/Spot54"), NodePath("Tile colliders/Spot55"), NodePath("Tile colliders/Spot56"), NodePath("Tile colliders/Spot57"), NodePath("Tile colliders/Spot58"), NodePath("Tile colliders/Spot59"), NodePath("Tile colliders/Spot60"), NodePath("Tile colliders/Spot61"), NodePath("Tile colliders/Spot62"), NodePath("Tile colliders/Spot63"), NodePath("Tile colliders/Spot64"), NodePath("Tile colliders/Spot65"), NodePath("Tile colliders/Spot66"), NodePath("Tile colliders/Spot67"), NodePath("Tile colliders/Spot68"), NodePath("Tile colliders/Spot69"), NodePath("Tile colliders/Spot70"), NodePath("Tile colliders/Spot71"), NodePath("Tile colliders/Spot72"), NodePath("Tile colliders/Spot73"), NodePath("Tile colliders/Spot74")]
-players = [NodePath("Players/Player1"), NodePath(""), NodePath(""), NodePath("")]
+players = [NodePath("Players/Player1"), null, null, null]
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(163, -894)
@@ -1448,27 +1435,38 @@ position = Vector2(254, -1563)
 [node name="Players" type="Node" parent="."]
 
 [node name="Player1" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
+z_as_relative = false
 position = Vector2(-3163, -43)
 sprite_frames = SubResource("SpriteFrames_uixav")
 animation = &"walk"
-frame_progress = 0.276995
 flip_h = true
+script = ExtResource("6_ir2so")
 
 [node name="Player2" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
+z_as_relative = false
 position = Vector2(-3382, 0)
 sprite_frames = SubResource("SpriteFrames_vuu3e")
-frame = 3
-frame_progress = 0.921508
+animation = &"walk"
+script = ExtResource("6_ir2so")
 
 [node name="Player3" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
 position = Vector2(-3547, -175)
 sprite_frames = SubResource("SpriteFrames_uatms")
+animation = &"walk"
 frame = 1
-frame_progress = 0.45415
+frame_progress = 0.0351934
+script = ExtResource("6_ir2so")
 
 [node name="Player4" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
 position = Vector2(-3265, -306)
 sprite_frames = SubResource("SpriteFrames_11ejg")
-frame_progress = 0.197098
+animation = &"walk"
+frame = 1
+frame_progress = 0.10369
+script = ExtResource("6_ir2so")
 
 [connection signal="dice_has_rolled" from="Dice" to="." method="_on_dice_dice_has_rolled"]
