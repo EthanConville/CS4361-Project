@@ -10,6 +10,9 @@ extends Node2D
 
 var place : int = 1
 var number_of_spaces : int
+@onready var dice := $Dice
+@onready var timer := $Timer
+
 func _ready() -> void:
 	if is_instance_valid(volcano) and volcano.sprite_frames.get_animation_names().size() > 0:
 		volcano.play("default")
@@ -25,11 +28,20 @@ func _ready() -> void:
 	
 	number_of_spaces = game_spaces.size()
 	
-func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_click") and place <= (number_of_spaces - 1):
+
+
+func _on_dice_dice_has_rolled(roll: Variant) -> void:
+	print(roll)
+	while(roll != 0):
+		await(move(place))
+		place += 1
+		roll -= 1
+		#piece has stopped moving
+		if roll == 0:
+			pass
+
+func move(place) -> void: 
 		var tween = create_tween()
 		tween.tween_property(player_1, "position", game_spaces[place].position, 1)
-		place += 1
-	elif place >= number_of_spaces:
-		print("Player won game")
-		
+		timer.start()
+		await timer.timeout
