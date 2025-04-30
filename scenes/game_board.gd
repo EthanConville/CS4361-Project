@@ -80,6 +80,9 @@ func TileAction() -> void:
 		#store tile
 		"purple":
 			pass
+			#var shop = preload("res://UI.tscn").instantiate()
+			#shop.set_player(current_player)
+			#get_tree().root.add_child(shop)
 		#yellow tiles
 		#gives you $100
 		"yellow":

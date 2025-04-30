@@ -1,36 +1,55 @@
 extends Control
 
 var player = null
-var items = [
-	{"name": "Speed Boost", "cost": 50},
-	{"name": "Extra Turn", "cost": 100},
-	{"name": "Shield", "cost": 75},
+var abilities = [
+	{"name": "Move Forward", "cost": 200},
+	{"name": "Extra Turn", "cost": 1000},
+	{"name": "Move Enemy backward", "cost":500},
 ]
 
 func _ready():
-	update_shop()
+	# Set up buttons
+	$VBoxContainer/Forward.text = abilities[0].name + " - " + str(abilities[0].cost) + " pts"
+	$VBoxContainer/Backward.text = abilities[1].name + " - " + str(abilities[1].cost) + " pts"
+	$VBoxContainer/Extra.text = abilities[2].name + " - " + str(abilities[2].cost) + " pts"
+
+	# Connect button signals
+	$VBoxContainer/Forward.connect("pressed", self, "_on_SpeedBoostButton_pressed")
+	$VBoxContainer/Extra.connect("pressed", self, "_on_ExtraTurnButton_pressed")
+	$VBoxContainer/Backward.connect("pressed", self, "_on_ShieldButton_pressed")
+	$VBoxContainer/CloseButton.connect("pressed", self, "_on_CloseButton_pressed")
 
 func set_player(p):
 	player = p
 
-func update_shop():
-	var item_list = $ItemList
-	item_list.clear()
-	for item in items:
-		item_list.add_item("%s - %d pts" % [item.name, item.cost])
+# Each button press will call the corresponding function
 
-func _on_BuyButton_pressed():
-	var selected = $ItemList.get_selected_items()
-	if selected.size() == 0:
-		return
-	var item = items[selected[0]]
-	if player.Money >= item.cost:
-		player.Money -= item.cost
-		# Here you would add logic to "give" the item to the player
-		print("Purchased:", item.name)
+func _on_SpeedBoostButton_pressed():
+	if player.Money >= abilities[0].cost:
+		player.Money -= abilities[0].cost
+		# Apply the Speed Boost ability to the player (e.g., increase movement speed)
+		print("Speed Boost purchased!")
 		queue_free()  # Close the shop
 	else:
-		print("Not enough money!")
+		print("Not enough money for Speed Boost!")
+
+func _on_ExtraTurnButton_pressed():
+	if player.Money >= abilities[1].cost:
+		player.Money -= abilities[1].cost
+		# Apply the Extra Turn ability (e.g., give the player another turn)
+		print("Extra Turn purchased!")
+		queue_free()  # Close the shop
+	else:
+		print("Not enough money for Extra Turn!")
+
+func _on_ShieldButton_pressed():
+	if player.Money >= abilities[2].cost:
+		player.Money -= abilities[2].cost
+		# Apply the Shield ability (e.g., reduce damage taken)
+		print("Shield purchased!")
+		queue_free()  # Close the shop
+	else:
+		print("Not enough money for Shield!")
 
 func _on_CloseButton_pressed():
-	queue_free()
+	queue_free()  # Close the shop without making a purchase

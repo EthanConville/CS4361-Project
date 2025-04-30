@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dxqufae6j4qcn"]
+[gd_scene load_steps=60 format=3 uid="uid://dxqufae6j4qcn"]
 
 [ext_resource type="Script" uid="uid://c506lwf131w43" path="res://scenes/game_board.gd" id="1_p2sq2"]
 [ext_resource type="Texture2D" uid="uid://bfbwtt77vn58d" path="res://assets/CandyLand Assets/Candyland Tileset.png" id="2_fbkij"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bvsvqxx7tfxp3" path="res://assets/CandyLand Assets/Untitled_14.png" id="14_foxsi"]
 [ext_resource type="Texture2D" uid="uid://d4efejyw5mw38" path="res://assets/CandyLand Assets/Untitled_15.png" id="15_5yngt"]
 [ext_resource type="Texture2D" uid="uid://f204rdaayfay" path="res://assets/CandyLand Assets/Untitled_16.png" id="16_vuu3e"]
+[ext_resource type="Script" uid="uid://by51ypeu5lpx5" path="res://scenes/rich_text_label.gd" id="17_5yngt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
 
@@ -1722,5 +1723,18 @@ rotation = -0.170633
 scale = Vector2(6.70333, 7.3557)
 sprite_frames = SubResource("SpriteFrames_6wa5b")
 frame_progress = 0.0348118
+
+[node name="scoreLabels" type="StaticBody2D" parent="."]
+z_index = 6
+z_as_relative = false
+scale = Vector2(12, 12)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="scoreLabels"]
+offset_left = -407.7
+offset_top = -314.0
+offset_right = -238.7
+offset_bottom = -196.0
+text = "Current Score"
+script = ExtResource("17_5yngt")
 
 [connection signal="dice_has_rolled" from="Dice" to="." method="_on_dice_dice_has_rolled"]
