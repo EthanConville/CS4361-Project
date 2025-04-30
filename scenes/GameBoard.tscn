@@ -1076,68 +1076,7 @@ sources/0 = SubResource("TileSetAtlasSource_cpr0p")
 sources/3 = SubResource("TileSetAtlasSource_2mynd")
 sources/4 = SubResource("TileSetAtlasSource_fc4ka")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_anyy6"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_eyyia")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_7v3y5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_uatms")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_3fbfl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_c4wyl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_fvqs0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_tppf5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_11ejg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_g0hcn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_1nnu7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_g0hcn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_11ejg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_tppf5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_fvqs0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_c4wyl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_3fbfl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_uatms")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_7v3y5")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
 }]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhtls"]
 atlas = ExtResource("6_dyuqk")
 region = Rect2(9, 0, 252, 341)
