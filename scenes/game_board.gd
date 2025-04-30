@@ -5,7 +5,7 @@ extends Node2D
 
 @onready var volcano: AnimatedSprite2D = get_node("Volcano")
 @onready var candy_cane_palace: AnimatedSprite2D = get_node("Candy Cane Palace")
-@onready var chocolate_lake: AnimatedSprite2D = get_node("Chocolate Lake")
+@onready var chocolate_lake: AnimatedSprite2D = get_node("Licorice Lagoon")
 @onready var cotton_candy_cottage: AnimatedSprite2D = get_node("Cotton Candy Cottage")
 
 @export var players : Array[Character]

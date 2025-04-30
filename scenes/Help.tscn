@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1yy0cv682li"]
+[gd_scene load_steps=8 format=3 uid="uid://d1yy0cv682li"]
 
 [ext_resource type="Script" uid="uid://c85vuxe3vgx4d" path="res://scripts/help.gd" id="1_vtcus"]
 [ext_resource type="Texture2D" uid="uid://ct6dhkjltcab8" path="res://assets/CandyLand Assets/help_bg__upscayl_4x_upscayl-standard-4x.png" id="2_acoij"]
 [ext_resource type="Texture2D" uid="uid://bwr6yb1bvg8d6" path="res://assets/CandyLand Assets/BACK-4-29-2025.png" id="3_1egw1"]
+[ext_resource type="Texture2D" uid="uid://bqkw3wh61q013" path="res://assets/CandyLand Assets/To-play-press-spacebar-to-rol-4-30-2025.png" id="4_j1qxv"]
+[ext_resource type="Texture2D" uid="uid://b1wesdoykkcyg" path="res://assets/CandyLand Assets/The-first-player-to-navigate-t-4-30-2025.png" id="5_mqstw"]
+[ext_resource type="Texture2D" uid="uid://dxmd5plhyxxbh" path="res://assets/CandyLand Assets/Some-of-the-tiles-are-special-4-30-2025 (1).png" id="6_n7bmx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j1qxv"]
 
@@ -22,12 +25,33 @@ texture = ExtResource("2_acoij")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 994.0
-offset_top = 563.0
-offset_right = 2026.0
-offset_bottom = 1002.0
+offset_left = 41.0001
+offset_top = 575.0
+offset_right = 1073.0
+offset_bottom = 1014.0
 scale = Vector2(0.1, 0.1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_j1qxv")
 icon = ExtResource("3_1egw1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "     "
+
+[node name="To-play-press-spacebar-to-rol-4-30-2025" type="Sprite2D" parent="."]
+position = Vector2(252, 121)
+scale = Vector2(0.496824, 0.496824)
+texture = ExtResource("4_j1qxv")
+
+[node name="The-first-player-to-navigate-t-4-30-2025" type="Sprite2D" parent="."]
+position = Vector2(859, 593)
+scale = Vector2(0.732759, 0.732759)
+texture = ExtResource("5_mqstw")
+
+[node name="Some-of-the-tiles-are-special-4-30-2025(1)" type="Sprite2D" parent="."]
+position = Vector2(912, 115)
+scale = Vector2(0.58845, 0.58845)
+texture = ExtResource("6_n7bmx")
 
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
