@@ -1,18 +1,220 @@
-[gd_scene load_steps=8 format=3 uid="uid://cge6b3xgog70h"]
+[gd_scene load_steps=24 format=3 uid="uid://cge6b3xgog70h"]
 
 [ext_resource type="Script" uid="uid://4564op2ec35f" path="res://scripts/start_game.gd" id="1_gog4b"]
 [ext_resource type="Texture2D" uid="uid://dgya0mq7nltu6" path="res://assets/CandyLand Assets/marshmallow-removebg-preview.png" id="2_ajk8e"]
+[ext_resource type="Texture2D" uid="uid://ciw1426ul7ji" path="res://assets/CandyLand Assets/Start-Game-4-29-2025 (1).png" id="2_fdd41"]
 [ext_resource type="Texture2D" uid="uid://bj3hoc1mc7bjj" path="res://assets/CandyLand Assets/cotton_candy-removebg-preview.png" id="3_f1whm"]
 [ext_resource type="Texture2D" uid="uid://cv87jve1akcfl" path="res://assets/CandyLand Assets/chocolate-removebg-preview.png" id="4_fdd41"]
 [ext_resource type="Texture2D" uid="uid://b1wps0pxp5pkd" path="res://assets/CandyLand Assets/candy_corn-removebg-preview.png" id="5_1vjhn"]
+[ext_resource type="Texture2D" uid="uid://c3otb7crlq6xo" path="res://assets/CandyLand Assets/Sugarlandia-4-29-2025.png" id="6_f1whm"]
+[ext_resource type="Texture2D" uid="uid://cqspfdmuam672" path="res://assets/CandyLand Assets/an/1.png" id="8_cl2y3"]
+[ext_resource type="Texture2D" uid="uid://vl22d75wpoes" path="res://assets/CandyLand Assets/an/2.png" id="9_0vs3l"]
+[ext_resource type="Texture2D" uid="uid://dt8ri6xacfutk" path="res://assets/CandyLand Assets/an/3.png" id="10_i7eba"]
+[ext_resource type="Texture2D" uid="uid://cg6t0qtxaq081" path="res://assets/CandyLand Assets/an/4.png" id="11_qiaba"]
+[ext_resource type="Texture2D" uid="uid://bnv6p8c5frq0f" path="res://assets/CandyLand Assets/an/5.png" id="12_suxjx"]
+[ext_resource type="Texture2D" uid="uid://b7fypxnei548m" path="res://assets/CandyLand Assets/an/6.png" id="13_h56gg"]
+[ext_resource type="Texture2D" uid="uid://ctragxubbb3nw" path="res://assets/CandyLand Assets/an/7.png" id="14_wt344"]
+[ext_resource type="Texture2D" uid="uid://pbja8dotudrp" path="res://assets/CandyLand Assets/an/8.png" id="15_qiaba"]
+[ext_resource type="Texture2D" uid="uid://2aavb0abp2i8" path="res://assets/CandyLand Assets/an/9.png" id="16_suxjx"]
+[ext_resource type="Texture2D" uid="uid://d3sgpaeunc21l" path="res://assets/CandyLand Assets/an/10.png" id="17_h56gg"]
+[ext_resource type="Texture2D" uid="uid://b33l4wi4mek4b" path="res://assets/CandyLand Assets/HELP-4-29-2025.png" id="18_suxjx"]
 
-[sub_resource type="Animation" id="Animation_2cjuw"]
-resource_name = "start_game"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ryxiv"]
-_data = {
-&"start_game": SubResource("Animation_2cjuw")
+[sub_resource type="Animation" id="Animation_fdd41"]
+resource_name = "move"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marshmallow-removebg-preview:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(171, 1000), Vector2(171, 425), Vector2(171, 475)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CottonCandy-removebg-preview:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1173, 1000), Vector2(1173, 420), Vector2(1173, 450)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Chocolate-removebg-preview:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(340, 1000), Vector2(340, 400), Vector2(340, 430)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CandyCorn-removebg-preview:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(825, 1000), Vector2(825, 410), Vector2(825, 450)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sugarlandia:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(590, -100), Vector2(590, 150), Vector2(590, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_1vjhn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marshmallow-removebg-preview:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(171, 1000)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CottonCandy-removebg-preview:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1173, 1000)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Chocolate-removebg-preview:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(340, 1000)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CandyCorn-removebg-preview:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(825, 1000)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sugarlandia:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(590, -100)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2cjuw"]
+_data = {
+&"RESET": SubResource("Animation_1vjhn"),
+&"move": SubResource("Animation_fdd41")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdd41"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wt344"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_cl2y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0vs3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i7eba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qiaba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_suxjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_h56gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wt344")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qiaba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_suxjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_h56gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_suxjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qiaba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wt344")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_h56gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_suxjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qiaba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i7eba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0vs3l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,44 +223,60 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_gog4b")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 537.0
-offset_top = 163.0
-offset_right = 635.0
-offset_bottom = 186.0
-text = "CANDYLAND"
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 537.0
-offset_top = 301.0
-offset_right = 643.0
-offset_bottom = 332.0
-action_mode = 0
-text = "START GAME"
-
 [node name="Marshmallow-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(199, 756)
+position = Vector2(171, 1000)
 texture = ExtResource("2_ajk8e")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Marshmallow-removebg-preview"]
-libraries = {
-&"": SubResource("AnimationLibrary_ryxiv")
-}
-
 [node name="CottonCandy-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(1560.92, 753.25)
+position = Vector2(1173, 1000)
 scale = Vector2(1.30387, 1.30387)
 texture = ExtResource("3_f1whm")
 
 [node name="Chocolate-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(997, 726)
+position = Vector2(340, 1000)
 texture = ExtResource("4_fdd41")
 
 [node name="CandyCorn-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(590, 760)
+position = Vector2(825, 1000)
 texture = ExtResource("5_1vjhn")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Sugarlandia" type="Sprite2D" parent="."]
+position = Vector2(590, -100)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_f1whm")
+
+[node name="Move" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2cjuw")
+}
+speed_scale = 1.5
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 200.0
+offset_right = 1509.0
+offset_bottom = 444.0
+scale = Vector2(0.25, 0.25)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdd41")
+icon = ExtResource("2_fdd41")
+
+[node name="background" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.903598, 0.903598, 0.903598, 1)
+z_index = -1
+position = Vector2(576.5, 233.5)
+scale = Vector2(0.5765, 0.539159)
+sprite_frames = SubResource("SpriteFrames_wt344")
+frame_progress = 0.0942564
+
+[node name="Help" type="Button" parent="."]
+offset_left = 543.0
+offset_top = 285.0
+offset_right = 1575.0
+offset_bottom = 733.0
+scale = Vector2(0.1, 0.1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fdd41")
+icon = ExtResource("18_suxjx")
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Help" to="." method="_on_help_pressed"]
