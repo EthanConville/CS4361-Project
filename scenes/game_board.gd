@@ -18,6 +18,9 @@ var dice_rolled : bool = false
 @onready var dice := $Dice
 @onready var timer := $Timer
 
+
+#stupid to define it like this but i dont care
+@export var colorList: Array[String]
 func _ready() -> void:
 	if is_instance_valid(volcano) and volcano.sprite_frames.get_animation_names().size() > 0:
 		volcano.play("default")
@@ -40,8 +43,8 @@ func _on_dice_dice_has_rolled(roll: Variant) -> void:
 	#update player position
 	players[current_player].current_tile += roll
 	while(roll != 0):
-		await(move(place))
-		place += 1
+		await(move(players[current_player].place))
+		players[current_player].place +=1
 		roll -= 1
 		#piece has stopped moving
 		if roll == 0:
@@ -50,43 +53,55 @@ func _on_dice_dice_has_rolled(roll: Variant) -> void:
 func move(place) -> void:
 		players[current_player].play("walk")
 		var tween = create_tween()
-		tween.tween_property(players[current_player], "position", game_spaces[place].position, 1)
+		tween.tween_property(players[current_player], "position", game_spaces[players[current_player].place].position, 1)
 		timer.start()
 		await timer.timeout
 		players[current_player].stop()
 
 func TileAction() -> void:
-	var remainder: int = players[current_player].current_tile % 6
+	var currentColor: String = colorList[players[current_player].current_tile]
 	#tile colors
-	match remainder:
+	match currentColor:
 		#red tiles
-		0:
+		"red":
 			timer.start()
 			await timer.timeout
 			#move back 3 tiles
 			for i in range(2):
-				await(move(place))
-				place -= 1
+				await(move(players[current_player].place))
+				players[current_player].place -=1
 			
 		#purple tiles
-		1:
+		#store tile
+		"purple":
 			pass
 		#yellow tiles
-		2:
-			pass
+		#gives you $100
+		"yellow":
+			players[current_player].Money += 50
+			
 		#blue tiles
-		3:
-			pass
+		#gives you $50
+		"blue":
+			players[current_player].Money += 50
 		
 		#green tiles
-		4:
+		"green":
 			#move forward 3 tiles
 			for i in range(2):
-				await(move(place))
-				place += 1
+				await(move(players[current_player].place))
+				players[current_player].place +=1
 			
 		#orange tiles
-		5:
+		"orange":
+			pass
+		
+		"finish":
 			pass
 	#change turns 
+	if current_player == 3:
+		current_player = 1
+	else:
+		current_player += 1
+	
 	dice_rolled = false
