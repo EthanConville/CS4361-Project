@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dxqufae6j4qcn"]
+[gd_scene load_steps=36 format=3 uid="uid://dxqufae6j4qcn"]
 
 [ext_resource type="Script" uid="uid://c506lwf131w43" path="res://scenes/game_board.gd" id="1_p2sq2"]
 [ext_resource type="Texture2D" uid="uid://bfbwtt77vn58d" path="res://assets/CandyLand Assets/Candyland Tileset.png" id="2_fbkij"]
@@ -7,8 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://kaq8sepuycas" path="res://scenes/dice.tscn" id="4_p2sq2"]
 [ext_resource type="Texture2D" uid="uid://dwi8f8m36shbl" path="res://assets/sprites and art/Sprites/Sprites.png" id="5_fc4ka"]
 [ext_resource type="Texture2D" uid="uid://c8tptguhreb7i" path="res://assets/sprites and art/Sprites/1.png" id="6_dyuqk"]
+[ext_resource type="Script" uid="uid://kmy0s1i1qrmf" path="res://scripts/Character.gd" id="6_ir2so"]
+[ext_resource type="Script" uid="uid://cymglb5jb6imf" path="res://scripts/TileData.gd" id="6_yg655"]
 [ext_resource type="Texture2D" uid="uid://c4ygl0hb5n0i6" path="res://assets/sprites and art/Sprites/3.png" id="8_jhtls"]
 [ext_resource type="Texture2D" uid="uid://bkxudb8mwma61" path="res://assets/sprites and art/Sprites/4.png" id="9_ir2so"]
+[ext_resource type="Texture2D" uid="uid://boeijpuolcld" path="res://assets/sprites and art/cloud.png" id="11_nhjkd"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
 
@@ -1049,14 +1052,6 @@ region = Rect2(9, 0, 252, 341)
 atlas = ExtResource("6_dyuqk")
 region = Rect2(261, 0, 252, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nhjkd"]
-atlas = ExtResource("6_dyuqk")
-region = Rect2(513, 0, 252, 341)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yg655"]
-atlas = ExtResource("6_dyuqk")
-region = Rect2(765, 0, 252, 341)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_uixav"]
 animations = [{
 "frames": [{
@@ -1065,12 +1060,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ir2so")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nhjkd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yg655")
 }],
 "loop": true,
 "name": &"walk",
@@ -1109,7 +1098,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_5yngt")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -1145,7 +1134,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_7v3y5")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -1181,14 +1170,14 @@ animations = [{
 "texture": SubResource("AtlasTexture_tppf5")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("game_spaces", "players")]
 script = ExtResource("1_p2sq2")
 game_spaces = [NodePath("Tile colliders/Start"), NodePath("Tile colliders/Spot2"), NodePath("Tile colliders/Spot3"), NodePath("Tile colliders/Spot4"), NodePath("Tile colliders/Spot5"), NodePath("Tile colliders/Spot6"), NodePath("Tile colliders/Spot7"), NodePath("Tile colliders/Spot8"), NodePath("Tile colliders/Spot9"), NodePath("Tile colliders/Spot10"), NodePath("Tile colliders/Spot11"), NodePath("Tile colliders/Spot12"), NodePath("Tile colliders/Spot13"), NodePath("Tile colliders/Spot14"), NodePath("Tile colliders/Spot15"), NodePath("Tile colliders/Spot16"), NodePath("Tile colliders/Spot17"), NodePath("Tile colliders/Spot18"), NodePath("Tile colliders/Spot19"), NodePath("Tile colliders/Spot20"), NodePath("Tile colliders/Spot21"), NodePath("Tile colliders/Spot22"), NodePath("Tile colliders/Spot23"), NodePath("Tile colliders/Spot24"), NodePath("Tile colliders/Spot25"), NodePath("Tile colliders/Spot26"), NodePath("Tile colliders/Spot27"), NodePath("Tile colliders/Spot28"), NodePath("Tile colliders/Spot29"), NodePath("Tile colliders/Spot30"), NodePath("Tile colliders/Spot31"), NodePath("Tile colliders/Spot32"), NodePath("Tile colliders/Spot33"), NodePath("Tile colliders/Spot34"), NodePath("Tile colliders/Spot35"), NodePath("Tile colliders/Spot36"), NodePath("Tile colliders/Spot37"), NodePath("Tile colliders/Spot38"), NodePath("Tile colliders/Spot39"), NodePath("Tile colliders/Spot40"), NodePath("Tile colliders/Spot41"), NodePath("Tile colliders/Spot42"), NodePath("Tile colliders/Spot43"), NodePath("Tile colliders/Spot44"), NodePath("Tile colliders/Spot45"), NodePath("Tile colliders/Spot46"), NodePath("Tile colliders/Spot47"), NodePath("Tile colliders/Spot48"), NodePath("Tile colliders/Spot49"), NodePath("Tile colliders/Spot50"), NodePath("Tile colliders/Spot51"), NodePath("Tile colliders/Spot52"), NodePath("Tile colliders/Spot53"), NodePath("Tile colliders/Spot54"), NodePath("Tile colliders/Spot55"), NodePath("Tile colliders/Spot56"), NodePath("Tile colliders/Spot57"), NodePath("Tile colliders/Spot58"), NodePath("Tile colliders/Spot59"), NodePath("Tile colliders/Spot60"), NodePath("Tile colliders/Spot61"), NodePath("Tile colliders/Spot62"), NodePath("Tile colliders/Spot63"), NodePath("Tile colliders/Spot64"), NodePath("Tile colliders/Spot65"), NodePath("Tile colliders/Spot66"), NodePath("Tile colliders/Spot67"), NodePath("Tile colliders/Spot68"), NodePath("Tile colliders/Spot69"), NodePath("Tile colliders/Spot70"), NodePath("Tile colliders/Spot71"), NodePath("Tile colliders/Spot72"), NodePath("Tile colliders/Spot73"), NodePath("Tile colliders/Spot74")]
-players = [NodePath("Players/Player1"), null, null, null]
+players = [NodePath("Players/Player1"), NodePath("Players/Player2"), NodePath("Players/Player3"), NodePath("Players/Player4")]
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(163, -894)
@@ -1225,250 +1214,344 @@ one_shot = true
 
 [node name="Start" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2996, 176)
+script = ExtResource("6_yg655")
 
 [node name="Spot2" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2687, 275)
+script = ExtResource("6_yg655")
 
 [node name="Spot3" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2429, 401)
+script = ExtResource("6_yg655")
 
 [node name="Spot4" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2178, 525)
+script = ExtResource("6_yg655")
 
 [node name="Spot5" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1922, 654)
+script = ExtResource("6_yg655")
 
 [node name="Spot6" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1664, 783)
+script = ExtResource("6_yg655")
 
 [node name="Spot7" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1415, 920)
+script = ExtResource("6_yg655")
 
 [node name="Spot8" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1155, 1067)
+script = ExtResource("6_yg655")
 
 [node name="Spot9" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-899, 1172)
+script = ExtResource("6_yg655")
 
 [node name="Spot10" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-637, 1283)
+script = ExtResource("6_yg655")
 
 [node name="Spot11" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-383, 1393)
+script = ExtResource("6_yg655")
 
 [node name="Spot12" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-133, 1299)
+script = ExtResource("6_yg655")
 
 [node name="Spot13" type="Marker2D" parent="Tile colliders"]
 position = Vector2(107, 1172)
+script = ExtResource("6_yg655")
 
 [node name="Spot14" type="Marker2D" parent="Tile colliders"]
 position = Vector2(375, 1071)
+script = ExtResource("6_yg655")
 
 [node name="Spot15" type="Marker2D" parent="Tile colliders"]
 position = Vector2(173, 940)
+script = ExtResource("6_yg655")
 
 [node name="Spot16" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-156, 920)
+script = ExtResource("6_yg655")
 
 [node name="Spot17" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-383, 1067)
+script = ExtResource("6_yg655")
 
 [node name="Spot18" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-646, 936)
+script = ExtResource("6_yg655")
 
 [node name="Spot19" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-899, 800)
+script = ExtResource("6_yg655")
 
 [node name="Spot20" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-637, 654)
+script = ExtResource("6_yg655")
 
 [node name="Spot21" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-399, 543)
+script = ExtResource("6_yg655")
 
 [node name="Spot22" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-156, 417)
+script = ExtResource("6_yg655")
 
 [node name="Spot23" type="Marker2D" parent="Tile colliders"]
 position = Vector2(77, 553)
+script = ExtResource("6_yg655")
 
 [node name="Spot24" type="Marker2D" parent="Tile colliders"]
 position = Vector2(284, 472)
+script = ExtResource("6_yg655")
 
 [node name="Spot25" type="Marker2D" parent="Tile colliders"]
 position = Vector2(497, 371)
+script = ExtResource("6_yg655")
 
 [node name="Spot26" type="Marker2D" parent="Tile colliders"]
 position = Vector2(254, 214)
+script = ExtResource("6_yg655")
 
 [node name="Spot27" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-14, 83)
+script = ExtResource("6_yg655")
 
 [node name="Spot28" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-277, -43)
+script = ExtResource("6_yg655")
 
 [node name="Spot29" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-504, 83)
+script = ExtResource("6_yg655")
 
 [node name="Spot30" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-787, 214)
+script = ExtResource("6_yg655")
 
 [node name="Spot31" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1025, 340)
+script = ExtResource("6_yg655")
 
 [node name="Spot32" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1273, 461)
+script = ExtResource("6_yg655")
 
 [node name="Spot33" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1531, 360)
+script = ExtResource("6_yg655")
 
 [node name="Spot34" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1794, 229)
+script = ExtResource("6_yg655")
 
 [node name="Spot35" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2037, 103)
+script = ExtResource("6_yg655")
 
 [node name="Spot36" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2325, -23)
+script = ExtResource("6_yg655")
 
 [node name="Spot37" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2568, -175)
+script = ExtResource("6_yg655")
 
 [node name="Spot38" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2325, -306)
+script = ExtResource("6_yg655")
 
 [node name="Spot39" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-2072, -437)
+script = ExtResource("6_yg655")
 
 [node name="Spot40" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1814, -528)
+script = ExtResource("6_yg655")
 
 [node name="Spot41" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1551, -675)
+script = ExtResource("6_yg655")
 
 [node name="Spot42" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1273, -806)
+script = ExtResource("6_yg655")
 
 [node name="Spot43" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-1025, -932)
+script = ExtResource("6_yg655")
 
 [node name="Spot44" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-787, -1074)
+script = ExtResource("6_yg655")
 
 [node name="Spot45" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-504, -932)
+script = ExtResource("6_yg655")
 
 [node name="Spot46" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-277, -806)
+script = ExtResource("6_yg655")
 
 [node name="Spot47" type="Marker2D" parent="Tile colliders"]
 position = Vector2(0, -675)
+script = ExtResource("6_yg655")
 
 [node name="Spot48" type="Marker2D" parent="Tile colliders"]
 position = Vector2(284, -528)
+script = ExtResource("6_yg655")
 
 [node name="Spot49" type="Marker2D" parent="Tile colliders"]
 position = Vector2(497, -437)
+script = ExtResource("6_yg655")
 
 [node name="Spot50" type="Marker2D" parent="Tile colliders"]
 position = Vector2(755, -306)
+script = ExtResource("6_yg655")
 
 [node name="Spot51" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1033, -437)
+script = ExtResource("6_yg655")
 
 [node name="Spot52" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1296, -306)
+script = ExtResource("6_yg655")
 
 [node name="Spot53" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1564, -175)
+script = ExtResource("6_yg655")
 
 [node name="Spot54" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1781, -43)
+script = ExtResource("6_yg655")
 
 [node name="Spot55" type="Marker2D" parent="Tile colliders"]
 position = Vector2(2034, -175)
+script = ExtResource("6_yg655")
 
 [node name="Spot56" type="Marker2D" parent="Tile colliders"]
 position = Vector2(2297, -306)
+script = ExtResource("6_yg655")
 
 [node name="Spot57" type="Marker2D" parent="Tile colliders"]
 position = Vector2(2034, -437)
+script = ExtResource("6_yg655")
 
 [node name="Spot58" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1781, -528)
+script = ExtResource("6_yg655")
 
 [node name="Spot59" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1564, -675)
+script = ExtResource("6_yg655")
 
 [node name="Spot60" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1296, -806)
+script = ExtResource("6_yg655")
 
 [node name="Spot61" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1564, -932)
+script = ExtResource("6_yg655")
 
 [node name="Spot62" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1781, -1074)
+script = ExtResource("6_yg655")
 
 [node name="Spot63" type="Marker2D" parent="Tile colliders"]
 position = Vector2(2034, -1205)
+script = ExtResource("6_yg655")
 
 [node name="Spot64" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1781, -1311)
+script = ExtResource("6_yg655")
 
 [node name="Spot65" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1564, -1442)
+script = ExtResource("6_yg655")
 
 [node name="Spot66" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1296, -1311)
+script = ExtResource("6_yg655")
 
 [node name="Spot67" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1033, -1205)
+script = ExtResource("6_yg655")
 
 [node name="Spot68" type="Marker2D" parent="Tile colliders"]
 position = Vector2(755, -1074)
+script = ExtResource("6_yg655")
 
 [node name="Spot69" type="Marker2D" parent="Tile colliders"]
 position = Vector2(497, -932)
+script = ExtResource("6_yg655")
 
 [node name="Spot70" type="Marker2D" parent="Tile colliders"]
 position = Vector2(284, -1074)
+script = ExtResource("6_yg655")
 
 [node name="Spot71" type="Marker2D" parent="Tile colliders"]
 position = Vector2(1, -1205)
+script = ExtResource("6_yg655")
 
 [node name="Spot72" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-277, -1311)
+script = ExtResource("6_yg655")
 
 [node name="Spot73" type="Marker2D" parent="Tile colliders"]
 position = Vector2(-14, -1442)
+script = ExtResource("6_yg655")
 
 [node name="Spot74" type="Marker2D" parent="Tile colliders"]
 position = Vector2(254, -1563)
+script = ExtResource("6_yg655")
 
 [node name="Players" type="Node" parent="."]
 
 [node name="Player1" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
+z_as_relative = false
 position = Vector2(-3163, -43)
 sprite_frames = SubResource("SpriteFrames_uixav")
 animation = &"walk"
-frame_progress = 0.276995
+frame = 1
+frame_progress = 0.599796
 flip_h = true
+script = ExtResource("6_ir2so")
 
 [node name="Player2" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
+z_as_relative = false
 position = Vector2(-3382, 0)
 sprite_frames = SubResource("SpriteFrames_vuu3e")
-frame = 3
-frame_progress = 0.921508
+animation = &"walk"
+script = ExtResource("6_ir2so")
 
 [node name="Player3" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
 position = Vector2(-3547, -175)
 sprite_frames = SubResource("SpriteFrames_uatms")
-frame = 1
-frame_progress = 0.45415
+animation = &"walk"
+frame = 2
+frame_progress = 0.0968299
+script = ExtResource("6_ir2so")
 
 [node name="Player4" type="AnimatedSprite2D" parent="Players"]
+z_index = 1
 position = Vector2(-3265, -306)
 sprite_frames = SubResource("SpriteFrames_11ejg")
-frame_progress = 0.197098
+animation = &"walk"
+frame = 1
+frame_progress = 0.166518
+script = ExtResource("6_ir2so")
+
+[node name="Cloud" type="Sprite2D" parent="."]
+z_index = -1
+z_as_relative = false
+position = Vector2(-237.875, -16.6251)
+scale = Vector2(54.5087, 45.625)
+texture = ExtResource("11_nhjkd")
 
 [connection signal="dice_has_rolled" from="Dice" to="." method="_on_dice_dice_has_rolled"]

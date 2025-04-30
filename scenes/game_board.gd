@@ -1,17 +1,20 @@
 extends Node2D
 
-@export var game_spaces : Array[Node]
+@export var game_spaces : Array[tile]
+
 
 @onready var volcano: AnimatedSprite2D = get_node("Volcano")
 @onready var candy_cane_palace: AnimatedSprite2D = get_node("Candy Cane Palace")
 @onready var chocolate_lake: AnimatedSprite2D = get_node("Chocolate Lake")
 @onready var cotton_candy_cottage: AnimatedSprite2D = get_node("Cotton Candy Cottage")
 
-@export var players : Array[AnimatedSprite2D]
+@export var players : Array[Character]
 var place : int = 1
 #control whose durrent it is
 var current_player = 0;
 var number_of_spaces : int
+var dice_rolled : bool = false
+
 @onready var dice := $Dice
 @onready var timer := $Timer
 
@@ -33,14 +36,16 @@ func _ready() -> void:
 
 
 func _on_dice_dice_has_rolled(roll: Variant) -> void:
-	print(roll)
+	dice_rolled = true
+	#update player position
+	players[current_player].current_tile += roll
 	while(roll != 0):
 		await(move(place))
 		place += 1
 		roll -= 1
 		#piece has stopped moving
 		if roll == 0:
-			pass
+			TileAction()
 
 func move(place) -> void:
 		players[current_player].play("walk")
@@ -48,3 +53,40 @@ func move(place) -> void:
 		tween.tween_property(players[current_player], "position", game_spaces[place].position, 1)
 		timer.start()
 		await timer.timeout
+		players[current_player].stop()
+
+func TileAction() -> void:
+	var remainder: int = players[current_player].current_tile % 6
+	#tile colors
+	match remainder:
+		#red tiles
+		0:
+			timer.start()
+			await timer.timeout
+			#move back 3 tiles
+			for i in range(2):
+				await(move(place))
+				place -= 1
+			
+		#purple tiles
+		1:
+			pass
+		#yellow tiles
+		2:
+			pass
+		#blue tiles
+		3:
+			pass
+		
+		#green tiles
+		4:
+			#move forward 3 tiles
+			for i in range(2):
+				await(move(place))
+				place += 1
+			
+		#orange tiles
+		5:
+			pass
+	#change turns 
+	dice_rolled = false
