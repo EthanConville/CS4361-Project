@@ -22,17 +22,13 @@ var dice_rolled : bool = false
 #stupid to define it like this but i dont care
 @export var colorList: Array[String]
 func _ready() -> void:
-	if is_instance_valid(volcano) and volcano.sprite_frames.get_animation_names().size() > 0:
-		volcano.play("default")
-		
-	if is_instance_valid(candy_cane_palace) and candy_cane_palace.sprite_frames.get_animation_names().size() > 0:
-		candy_cane_palace.play("default")
+	volcano.play("default")
+	
+	candy_cane_palace.play("default")
 
-	if is_instance_valid(chocolate_lake) and chocolate_lake.sprite_frames.get_animation_names().size() > 0:
-		chocolate_lake.play("default")
-		
-	if is_instance_valid(cotton_candy_cottage) and cotton_candy_cottage.sprite_frames.get_animation_names().size() > 0:
-		cotton_candy_cottage.play("default")
+	chocolate_lake.play("default")
+	
+	cotton_candy_cottage.play("default")
 	
 	number_of_spaces = game_spaces.size()
 	
@@ -109,7 +105,7 @@ func TileAction() -> void:
 			pass
 	#change turns 
 	if current_player == 3:
-		current_player = 1
+		current_player = 0
 	else:
 		current_player += 1
 	

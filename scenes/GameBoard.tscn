@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://dxqufae6j4qcn"]
+[gd_scene load_steps=68 format=3 uid="uid://dxqufae6j4qcn"]
 
 [ext_resource type="Script" uid="uid://c506lwf131w43" path="res://scenes/game_board.gd" id="1_p2sq2"]
 [ext_resource type="Texture2D" uid="uid://bfbwtt77vn58d" path="res://assets/CandyLand Assets/Candyland Tileset.png" id="2_fbkij"]
@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://kaq8sepuycas" path="res://scenes/dice.tscn" id="4_p2sq2"]
 [ext_resource type="Texture2D" uid="uid://dwi8f8m36shbl" path="res://assets/sprites and art/Sprites/Sprites.png" id="5_fc4ka"]
 [ext_resource type="Texture2D" uid="uid://c8tptguhreb7i" path="res://assets/sprites and art/Sprites/1.png" id="6_dyuqk"]
-[ext_resource type="Script" uid="uid://kmy0s1i1qrmf" path="res://scripts/Character.gd" id="6_ir2so"]
-[ext_resource type="Script" uid="uid://cymglb5jb6imf" path="res://scripts/TileData.gd" id="6_yg655"]
+[ext_resource type="Script" path="res://scripts/Character.gd" id="6_ir2so"]
+[ext_resource type="Script" path="res://scripts/TileData.gd" id="6_yg655"]
 [ext_resource type="Texture2D" uid="uid://c4ygl0hb5n0i6" path="res://assets/sprites and art/Sprites/3.png" id="8_jhtls"]
 [ext_resource type="Texture2D" uid="uid://bkxudb8mwma61" path="res://assets/sprites and art/Sprites/4.png" id="9_ir2so"]
 [ext_resource type="Texture2D" uid="uid://ct6dhkjltcab8" path="res://assets/CandyLand Assets/help_bg__upscayl_4x_upscayl-standard-4x.png" id="12_2ro5p"]
@@ -17,6 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://d4efejyw5mw38" path="res://assets/CandyLand Assets/Untitled_15.png" id="15_5yngt"]
 [ext_resource type="Texture2D" uid="uid://f204rdaayfay" path="res://assets/CandyLand Assets/Untitled_16.png" id="16_vuu3e"]
 [ext_resource type="Script" uid="uid://by51ypeu5lpx5" path="res://scenes/rich_text_label.gd" id="17_5yngt"]
+[ext_resource type="Texture2D" uid="uid://cv87jve1akcfl" path="res://assets/CandyLand Assets/chocolate-removebg-preview.png" id="18_7v3y5"]
+[ext_resource type="Script" uid="uid://dbrjtpunce0cp" path="res://scripts/choc_score.gd" id="19_uatms"]
+[ext_resource type="Texture2D" uid="uid://b1wps0pxp5pkd" path="res://assets/CandyLand Assets/candy_corn-removebg-preview.png" id="20_3fbfl"]
+[ext_resource type="Texture2D" uid="uid://bj3hoc1mc7bjj" path="res://assets/CandyLand Assets/cotton_candy-removebg-preview.png" id="21_c4wyl"]
+[ext_resource type="Script" uid="uid://c1bj1xem5mb83" path="res://scripts/corn_score.gd" id="21_fvqs0"]
+[ext_resource type="Texture2D" uid="uid://dgya0mq7nltu6" path="res://assets/CandyLand Assets/marshmallow-removebg-preview.png" id="22_fvqs0"]
+[ext_resource type="Script" uid="uid://bapu3e07s6pas" path="res://scripts/cotton_score.gd" id="23_tppf5"]
+[ext_resource type="Script" uid="uid://bm5ixp6kqrhsq" path="res://scripts/marsh_score.gd" id="25_11ejg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
 
@@ -1725,16 +1733,71 @@ sprite_frames = SubResource("SpriteFrames_6wa5b")
 frame_progress = 0.0348118
 
 [node name="scoreLabels" type="StaticBody2D" parent="."]
+visible = false
 z_index = 6
 z_as_relative = false
 scale = Vector2(12, 12)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="scoreLabels"]
-offset_left = -407.7
-offset_top = -314.0
-offset_right = -238.7
-offset_bottom = -196.0
+visible = false
+offset_left = -390.083
+offset_top = -195.667
+offset_right = -221.083
+offset_bottom = -77.6667
 text = "Current Score"
 script = ExtResource("17_5yngt")
+
+[node name="Chocolate-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(5733, -3407)
+scale = Vector2(4, 4)
+texture = ExtResource("18_7v3y5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Chocolate-removebg-preview"]
+offset_left = -757.5
+offset_top = -34.0
+offset_right = -644.5
+offset_bottom = -8.0
+scale = Vector2(5, 5)
+horizontal_alignment = 2
+script = ExtResource("19_uatms")
+
+[node name="CandyCorn-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(5696, 1564)
+scale = Vector2(4, 4)
+texture = ExtResource("20_3fbfl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CandyCorn-removebg-preview"]
+offset_left = -816.25
+offset_top = -18.0
+offset_right = -689.25
+offset_bottom = 10.0
+scale = Vector2(5, 5)
+horizontal_alignment = 2
+script = ExtResource("21_fvqs0")
+
+[node name="CottonCandy-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-4746, -3446)
+scale = Vector2(5, 5)
+texture = ExtResource("21_c4wyl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CottonCandy-removebg-preview"]
+offset_top = -11.0
+offset_right = 123.0
+offset_bottom = 13.0
+scale = Vector2(5, 5)
+script = ExtResource("23_tppf5")
+
+[node name="Marshmallow-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-5265, 1660)
+scale = Vector2(4, 4)
+texture = ExtResource("22_fvqs0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Marshmallow-removebg-preview"]
+offset_left = 144.0
+offset_top = -4.75
+offset_right = 286.0
+offset_bottom = 20.25
+scale = Vector2(5, 5)
+script = ExtResource("25_11ejg")
 
 [connection signal="dice_has_rolled" from="Dice" to="." method="_on_dice_dice_has_rolled"]
