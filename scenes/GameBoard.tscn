@@ -1,9 +1,5 @@
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 [gd_scene load_steps=59 format=3 uid="uid://dxqufae6j4qcn"]
-=======
-[gd_scene load_steps=47 format=3 uid="uid://dxqufae6j4qcn"]
->>>>>>> Stashed changes
 =======
 [gd_scene load_steps=47 format=3 uid="uid://dxqufae6j4qcn"]
 >>>>>>> Stashed changes
@@ -20,15 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://c4ygl0hb5n0i6" path="res://assets/sprites and art/Sprites/3.png" id="8_jhtls"]
 [ext_resource type="Texture2D" uid="uid://bkxudb8mwma61" path="res://assets/sprites and art/Sprites/4.png" id="9_ir2so"]
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://ct6dhkjltcab8" path="res://assets/CandyLand Assets/help_bg__upscayl_4x_upscayl-standard-4x.png" id="12_2ro5p"]
 [ext_resource type="Texture2D" uid="uid://b8qyvvfa4bv0e" path="res://assets/CandyLand Assets/Untitled_13.png" id="13_uixav"]
 [ext_resource type="Texture2D" uid="uid://bvsvqxx7tfxp3" path="res://assets/CandyLand Assets/Untitled_14.png" id="14_foxsi"]
 [ext_resource type="Texture2D" uid="uid://d4efejyw5mw38" path="res://assets/CandyLand Assets/Untitled_15.png" id="15_5yngt"]
 [ext_resource type="Texture2D" uid="uid://f204rdaayfay" path="res://assets/CandyLand Assets/Untitled_16.png" id="16_vuu3e"]
 =======
-=======
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://cqspfdmuam672" path="res://assets/CandyLand Assets/an/1.png" id="12_eyyia"]
 [ext_resource type="Texture2D" uid="uid://vl22d75wpoes" path="res://assets/CandyLand Assets/an/2.png" id="13_7v3y5"]
 [ext_resource type="Texture2D" uid="uid://dt8ri6xacfutk" path="res://assets/CandyLand Assets/an/3.png" id="14_uatms"]
@@ -40,9 +33,6 @@
 [ext_resource type="Texture2D" uid="uid://2aavb0abp2i8" path="res://assets/CandyLand Assets/an/9.png" id="20_g0hcn"]
 [ext_resource type="Texture2D" uid="uid://d3sgpaeunc21l" path="res://assets/CandyLand Assets/an/10.png" id="21_1nnu7"]
 [ext_resource type="Script" uid="uid://c85o8c0ny66ry" path="res://scenes/current_score_label.gd" id="22_7v3y5"]
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
@@ -1443,15 +1433,6 @@ sprite_frames = SubResource("SpriteFrames_anyy6")
 frame = 3
 frame_progress = 0.180271
 
-[node name="background" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.903598, 0.903598, 0.903598, 1)
-z_index = -1
-position = Vector2(-637, -1311)
-scale = Vector2(6.56194, 4.71331)
-sprite_frames = SubResource("SpriteFrames_anyy6")
-frame = 3
-frame_progress = 0.180271
-
 [node name="Dice" parent="." instance=ExtResource("4_p2sq2")]
 position = Vector2(20, 2311)
 scale = Vector2(14.4688, 14.5625)
@@ -1798,7 +1779,6 @@ frame_progress = 0.166518
 script = ExtResource("6_ir2so")
 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 [node name="Cloud" type="Sprite2D" parent="."]
 z_index = -1
 z_as_relative = false
@@ -1833,8 +1813,6 @@ scale = Vector2(6.70333, 7.3557)
 sprite_frames = SubResource("SpriteFrames_6wa5b")
 frame_progress = 0.0348118
 =======
-=======
->>>>>>> Stashed changes
 [node name="ScoreLabels" type="StaticBody2D" parent="."]
 scale = Vector2(10, 10)
 
@@ -1848,9 +1826,6 @@ Player 2:
 Player 3:
 Player 4:"
 script = ExtResource("22_7v3y5")
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
 
 [connection signal="dice_has_rolled" from="Dice" to="." method="_on_dice_dice_has_rolled"]
