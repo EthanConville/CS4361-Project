@@ -44,16 +44,17 @@ func updateScore():
 	pass
 	
 func _on_dice_dice_has_rolled(roll: Variant) -> void:
-	dice_rolled = true
-	#update player position
-	players[current_player].current_tile += roll
-	while(roll != 0):
-		await(move(players[current_player].place))
-		players[current_player].place +=1
-		roll -= 1
-		#piece has stopped moving
-		if roll == 0:
-			TileAction()
+	if !dice_rolled:
+		dice_rolled = true
+		#update player position
+		players[current_player].current_tile += roll
+		while(roll != 0):
+			await(move(players[current_player].place))
+			players[current_player].place +=1
+			roll -= 1
+			#piece has stopped moving
+			if roll == 0:
+				TileAction()
 
 func move(place) -> void:
 		players[current_player].play("walk")
