@@ -1,6 +1,7 @@
 extends Node2D
 
-@export var game_spaces : Array[Node]
+@export var game_spaces : Array[tile]
+
 
 @onready var volcano: AnimatedSprite2D = get_node("Volcano")
 @onready var candy_cane_palace: AnimatedSprite2D = get_node("Candy Cane Palace")
@@ -36,13 +37,15 @@ func _ready() -> void:
 
 func _on_dice_dice_has_rolled(roll: Variant) -> void:
 	dice_rolled = true
+	#update player position
+	players[current_player].current_tile += roll
 	while(roll != 0):
 		await(move(place))
 		place += 1
 		roll -= 1
 		#piece has stopped moving
 		if roll == 0:
-			pass
+			TileAction()
 
 func move(place) -> void:
 		players[current_player].play("walk")
@@ -51,3 +54,39 @@ func move(place) -> void:
 		timer.start()
 		await timer.timeout
 		players[current_player].stop()
+
+func TileAction() -> void:
+	var remainder: int = players[current_player].current_tile % 6
+	#tile colors
+	match remainder:
+		#red tiles
+		0:
+			timer.start()
+			await timer.timeout
+			#move back 3 tiles
+			for i in range(2):
+				await(move(place))
+				place -= 1
+			
+		#purple tiles
+		1:
+			pass
+		#yellow tiles
+		2:
+			pass
+		#blue tiles
+		3:
+			pass
+		
+		#green tiles
+		4:
+			#move forward 3 tiles
+			for i in range(2):
+				await(move(place))
+				place += 1
+			
+		#orange tiles
+		5:
+			pass
+	#change turns 
+	dice_rolled = false
