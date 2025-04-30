@@ -7,7 +7,7 @@ extends Node2D
 @onready var candy_cane_palace: AnimatedSprite2D = get_node("Candy Cane Palace")
 @onready var chocolate_lake: AnimatedSprite2D = get_node("Licorice Lagoon")
 @onready var cotton_candy_cottage: AnimatedSprite2D = get_node("Cotton Candy Cottage")
-
+@onready var bg = $background
 @export var players : Array[Character]
 var place : int = 1
 #control whose durrent it is
@@ -37,7 +37,12 @@ func _ready() -> void:
 	number_of_spaces = game_spaces.size()
 	
 
-
+func _process(delta: float) -> void:
+	updateScore()
+	
+func updateScore():
+	pass
+	
 func _on_dice_dice_has_rolled(roll: Variant) -> void:
 	dice_rolled = true
 	#update player position
@@ -68,8 +73,8 @@ func TileAction() -> void:
 			await timer.timeout
 			#move back 3 tiles
 			for i in range(2):
-				await(move(players[current_player].place))
 				players[current_player].place -=1
+				await(move(players[current_player].place))
 			
 		#purple tiles
 		#store tile
@@ -89,8 +94,8 @@ func TileAction() -> void:
 		"green":
 			#move forward 3 tiles
 			for i in range(2):
-				await(move(players[current_player].place))
 				players[current_player].place +=1
+				await(move(players[current_player].place))
 			
 		#orange tiles
 		"orange":
